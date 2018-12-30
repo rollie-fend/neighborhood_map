@@ -103,7 +103,6 @@ export class MapContainer extends Component {
     return data.response.venues.filter(item => item.name.includes(props.name) || props.name.includes(item.name));
   }
 
-
   addMarker = (places) => {
   // Check for completion    
     if (!places) 
@@ -138,10 +137,8 @@ export class MapContainer extends Component {
 
   render() {
     let selPl = this.state.selectedPlace;
-    console.log('this.props', this.props);
-    console.log('this.state', this.state);
     return (
-      <div>
+      <div className='App'>
         <Map google={this.props.google} 
           initialCenter={this.props.initialCenter}
           onReady={this.markedMap}
@@ -163,10 +160,10 @@ export class MapContainer extends Component {
                     alt={selPl.name + " food picture"}
                     src={selPl.photo.items[0].prefix + "120x120" + selPl.photo.items[0].suffix}/>
                     <p>Foursquare photo</p>
-                    {selPl && selPl.url?(<a href={selPl.url}>Go to website</a>): ""}
                   </div>
                   )
               : ""}
+              {selPl && selPl.url?(<a href={selPl.url}>Go to website</a>): ""}
             </div>
           </InfoWindow>
         </Map>

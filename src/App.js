@@ -29,7 +29,7 @@ class App extends Component {
       filtered: this.filterPlaces(this.state.places,"")
     });
   }
-   searchKey = (query) => {
+  searchKey = (query) => {
       this.setState({
       filtered: this.filterPlaces(this.state.places, query)
     });

@@ -6,7 +6,8 @@
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
-
+/* This block of code from https://www.w3schools.com/howto/howto_css_menu_icon.asp
+   on how to create an animated menu icon */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -57,13 +58,20 @@ code is mainly based on https://www.w3schools.com/howto/howto_js_sidenav.asp */
     text-align: left
 }
 
+#filter {
+  border: 1px solid gray;
+  padding: 3px;
+  width: 72%;
+  margin-left:20px;
+}
+
 /* When you mouse over the navigation links, change their color */
 .sidebar button:hover {
     color: red;
 }
 
 /* Position and style the close button (top right corner) */
-.sidebar .closebtn {
+.sidebar #closebtn {
     position: absolute;
     padding: 10px 10px 10px 10px;
     top: 10px;
@@ -75,16 +83,16 @@ code is mainly based on https://www.w3schools.com/howto/howto_js_sidenav.asp */
 change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
-    .sidebar .closebtn {font-size: 18px;}
+    .sidebar #closebtn {font-size: 18px;}
 }
 /* Up to here */
-.buttonGrp button{
+#buttonGrp button{
   display: block;
   padding: 5px;
   width: 90%;
 }
 
-.openbtn {
+#openbtn {
     position: absolute;
     top: 10px;
     padding: 10px 10px 10px 10px;
